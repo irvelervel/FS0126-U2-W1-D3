@@ -26,7 +26,7 @@ body {
   align-items: center;
   /* in caso di elementi su più di una "fila", gestisco come
   disporre le righe */
-  align-content: center;
+  /* align-content: center; */
 }
 
 .flex-item {
@@ -34,4 +34,19 @@ body {
   border: 1px solid black;
   padding: 1em;
   width: 40px;
+  text-align: center;
+}
+
+.flex-item:nth-of-type(5) {
+  /* il quinto flex-item */
+  align-self: stretch;
+  order: -1;
+  flex-grow: 2;
+}
+
+/* .flex-item:nth-of-type(10) */
+.flex-item:last-of-type {
+  /* il decimo flex-item */
+  align-self: stretch;
+  flex-shrink: 5;
 }

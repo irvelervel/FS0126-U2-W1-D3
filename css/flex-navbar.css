@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: orangered;
+  padding: 1em;
+  /* regole flexbox */
+  display: flex;
+  /* però display: flex come default imposta una
+    flex-direction a ROW, non va bene! */
+  /* inverto la flex-direction da mobile */
+  flex-direction: column; /* verticale */
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 1em;
+  /* utilizziamo anche qua flexbox per allineare
+  prima verticalmente e poi orizzontalmente gli
+  elementi della lista */
+  display: flex;
+  flex-direction: column;
+  /* da mobile non voglio gap */
+  gap: 0em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav li {
+  text-align: center;
+}
+
+header form {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header ul {
+    margin-bottom: 0em;
+    /* disponiamo in orizzontale i link */
+    flex-direction: row;
+    /* grazie a Paolo ci mettiamo un gap */
+    gap: 1em;
+  }
+}

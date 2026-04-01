@@ -1,0 +1,25 @@
+.card {
+  /* border: 1px solid black; */
+  width: 250px;
+  box-shadow: 5px 5px 15px 1px #747474;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.card button {
+  width: 100%;
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 0.5em 0;
+}
+
+.card div {
+  padding: 0.5em;
+}
+
+.card div h3 {
+  margin-top: 0;
+}
