@@ -1,0 +1,37 @@
+/* regole base */
+
+body {
+  background-color: rgb(185, 185, 185);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 1em;
+}
+
+/* regole flexbox */
+#flex-container {
+  border: 1px solid black;
+  height: 300px;
+  /* prima di tutto, rendiamolo display: flex */
+  display: flex;
+  /* sono anche automaticamente già impostate altre cose: */
+  /* flex-wrap: nowrap; */
+  /* flex-direction: row; */
+  /* justify-content: flex-start; */
+  /* align-items: stretch; */
+  flex-wrap: wrap; /* vai a capo, non comprimere */
+  /* in caso di spazio libero, è possibile redirstribuirlo
+  per allineare gli elementi sull'asse main o sull'asse cross */
+  /* centro su entrambi gli assi */
+  justify-content: center;
+  align-items: center;
+  /* in caso di elementi su più di una "fila", gestisco come
+  disporre le righe */
+  align-content: center;
+}
+
+.flex-item {
+  background-color: orange;
+  border: 1px solid black;
+  padding: 1em;
+  width: 40px;
+}

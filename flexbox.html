@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Basics</title>
+    <link rel="stylesheet" href="./css/flexbox.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Lezione su Flexbox!</h1>
+    </header>
+    <main>
+      <section id="flex-container">
+        <article class="flex-item">1</article>
+        <article class="flex-item">2</article>
+        <article class="flex-item">3</article>
+        <article class="flex-item">4</article>
+        <article class="flex-item">5</article>
+        <article class="flex-item">6</article>
+        <article class="flex-item">7</article>
+        <article class="flex-item">8</article>
+        <article class="flex-item">9</article>
+        <article class="flex-item">10</article>
+      </section>
+    </main>
+    <footer>
+      <p>EPICODE - <span id="year"></span></p>
+    </footer>
+    <script>
+      const now = new Date() // oggetto Data creato in questo momento
+      const currentYear = now.getFullYear() // 2026
+      // ora lo mettiamo dentro lo span con id "year"
+      const span = document.getElementById('year') // <span id="year"></span>
+      span.innerText = currentYear
+
+      //   MONORIGA X DAVIDE :)
+      //   document.getElementById('year').innerText = new Date().getFullYear()
+    </script>
+  </body>
+</html>
