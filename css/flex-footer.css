@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+#top {
+  flex-grow: 2;
+  background-color: #2ca1af;
+  /* il modo più semplice per centrare su X e Y un contenuto,
+  da oggi in poi, è utilizzando flexbox! con justify-content e
+  align-items */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* centrato! */
+}
+
+#top p {
+  margin: 0 0 1em 0;
+}
+
+#top a {
+  color: white;
+}
+
+#top i {
+  font-size: 1.5em;
+}
+
+#top div {
+  display: flex;
+  gap: 1em;
+}
+
+#middle {
+  background-color: #155c5e;
+}
+
+#middle ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+#middle a {
+  text-decoration: none;
+  color: white;
+}
+
+#bottom {
+  flex-grow: 1;
+  background-color: #a2d2ca;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#bottom p {
+  margin: 0 0 1em 0;
+}
+
+/* trucco per spingere in basso il footer SEMPRE: rendiamo
+il body display: flex, height: 100vh, flex-direction column e facciamo
+mangiare al main TUTTO lo spazio libero, così il footer finirà
+in fondo */
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+header h1 {
+  margin-top: 0;
+}

@@ -2,6 +2,11 @@
   /* border: 1px solid black; */
   width: 250px;
   box-shadow: 5px 5px 15px 1px #747474;
+  /* per uniformare le card e spingere il bottone
+  sempre in fondo, devo rendere lo spazio libero disponibile
+  come "spazio viola" in un contenitore flessibile */
+  display: flex;
+  flex-direction: column; /* ripristiniamo immagine sopra e testo sotto */
 }
 
 .card img {
@@ -18,8 +23,31 @@
 
 .card div {
   padding: 0.5em;
+  /* ora che lo spazio libero nella card è disponibile (viola),
+  lo faccio mangiare a questo div sotto l'immagine */
+  flex-grow: 1;
+  /* ora questo div tocca TUTTA lo spazio sotto l'immagine,
+  per distribuirlo rendo questo div un ulteriore contenitore
+  flessibile */
+  display: flex;
+  flex-direction: column;
+}
+
+/* ora faccio mangiare lo spazio libero (viola) dentro il
+div di ogni card al paragrafo, in modo da spingere il bottone
+in fondo; un'alternativa potrebbe essere quella di utilizzare su
+card div un justify-content: space-around, space-between */
+
+.card div p {
+  /* elemento centrale del div con il testo */
+  flex-grow: 1;
 }
 
 .card div h3 {
   margin-top: 0;
+}
+
+main {
+  display: flex;
+  gap: 1em;
 }
